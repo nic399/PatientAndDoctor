@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
-#import "Perscription.h"
 
 @class Patient;
+@class Prescription;
 
 @interface Doctor : Person
 

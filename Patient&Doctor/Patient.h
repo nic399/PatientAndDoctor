@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
+#import "Prescription.h"
 
 @class Doctor;
 
@@ -15,9 +16,11 @@
 
 @property (nonatomic, assign, readonly) int age;
 @property (nonatomic, strong, readwrite) NSString *healthcard;
+@property (nonatomic, strong, readonly) NSMutableArray *receivedPerscriptions;
 
 -(instancetype)initWithName:(NSString *)name andAge:(int)age;
 -(void)visitDoctor:(Doctor *)doctor;
 -(BOOL)requestMedication:(Doctor *)doctor;
+-(void)receivePrescription:(Prescription *)prescription;
 
 @end

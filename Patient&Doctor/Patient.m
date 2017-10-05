@@ -31,4 +31,8 @@
     return [doctor dispenseMedication:self];
 }
 
+-(void)receivePrescription:(Prescription *)prescription{
+    [self.receivedPerscriptions addObject:prescription];
+}
+
 @end

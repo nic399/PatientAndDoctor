@@ -6,18 +6,21 @@
 //  Copyright © 2017 Nicholas Fung. All rights reserved.
 //
 
-#import "Perscription.h"
+#import "Prescription.h"
+#import "Doctor.h"
 
-@implementation Perscription
+@implementation Prescription
 
 -(instancetype)initWithDate:(NSDate *)issueDate
                  forPatient:(NSString *)patientHealthcard
-           withPerscription:(NSString *)perscription{
+           withPrescription:(NSString *)prescription
+                 fromDoctor:(Doctor *)doctor{
     self = [super init];
     if (self) {
         _issueDate = issueDate;
         _patientHealthcard = patientHealthcard;
-        _perscription = perscription;
+        _prescription = prescription;
+        _issuingDoctor = doctor;
     }
     return self;
 }

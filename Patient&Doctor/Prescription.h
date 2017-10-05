@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Perscription : NSObject
+@class Doctor;
+
+@interface Prescription : NSObject
 
 @property (nonatomic, strong, readonly) NSString *patientHealthcard;
-@property (nonatomic, strong, readonly) NSString *perscription;
+@property (nonatomic, strong, readonly) NSString *prescription;
 @property (nonatomic, strong, readonly) NSDate *issueDate;
+@property (nonatomic, copy, readonly) Doctor *issuingDoctor;
 
 -(instancetype)initWithDate:(NSDate *)issueDate
                  forPatient:(NSString *)patientHealthcard
-           withPerscription:(NSString *)perscription;
+           withPrescription:(NSString *)prescription
+                 fromDoctor:(Doctor *)doctor;
 
 @end

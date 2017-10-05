@@ -8,14 +8,15 @@
 
 #import "Doctor.h"
 #import "Patient.h"
+#import "Prescription.h"
 
-static NSMutableSet *perscriptions;
+static NSMutableSet *prescriptions;
 
 @implementation Doctor
 
 +(void)initialize{
     if (self == [Doctor self]) {
-        perscriptions = [[NSMutableSet alloc] init];
+        prescriptions = [[NSMutableSet alloc] init];
         NSLog(@"'perscriptions' has been initialized");
     }
 }
@@ -40,13 +41,14 @@ static NSMutableSet *perscriptions;
 
 -(BOOL)dispenseMedication:(Patient *)patient{
     if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
+        
         NSLog(@"perscription dispensed");
-        Perscription *newPerscription = [[Perscription alloc] initWithDate:[NSDate date] forPatient:patient.healthcard withPerscription:@"New perscription"];
-        [perscriptions addObject:newPerscription];
-        NSLog(@"Total perscriptions issued: %lu",(unsigned long)[perscriptions count]);
+        Prescription *newPrescription = [[Prescription alloc] initWithDate:[NSDate date] forPatient:patient.healthcard withPrescription:@"New prescription" fromDoctor:self];
+        [prescriptions addObject:newPrescription];
+        NSLog(@"Total prescriptions issued: %lu",(unsigned long)[prescriptions count]);
         return true;
     }
-    NSLog(@"perscription denied");
+    NSLog(@"prescription denied");
     return false;
 }
 
