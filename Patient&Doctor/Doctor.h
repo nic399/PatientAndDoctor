@@ -16,6 +16,8 @@
 @property (nonatomic, strong, readonly) NSString *specialization;
 @property (nonatomic, strong, readwrite) NSMutableDictionary *currentPatients;
 
+//+(void)initialize;
+
 -(instancetype)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 
 -(BOOL)acceptPatient:(Patient *)patient;

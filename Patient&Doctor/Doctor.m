@@ -13,6 +13,13 @@ static NSMutableSet *perscriptions;
 
 @implementation Doctor
 
++(void)initialize{
+    if (self == [Doctor self]) {
+        perscriptions = [[NSMutableSet alloc] init];
+        NSLog(@"'perscriptions' has been initialized");
+    }
+}
+
 -(instancetype)initWithName:(NSString *)name andSpecialization:(NSString *)specialization{
     self = [super initWithName:name];
     if (self) {
