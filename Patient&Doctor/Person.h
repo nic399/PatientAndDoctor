@@ -1,5 +1,5 @@
 //
-//  Patient.h
+//  Person.h
 //  Patient&Doctor
 //
 //  Created by Nicholas Fung on 2017-10-05.
@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Person.h"
 
-@interface Patient : Person
+@interface Person : NSObject
 
-@property (nonatomic, assign, readonly) int age;
+@property (readonly, nonatomic, strong) NSString *name;
 
--(instancetype)initWithName:(NSString *)name andAge:(int)age;
+-(instancetype)initWithName:(NSString*)name;
 
 @end

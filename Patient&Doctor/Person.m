@@ -1,19 +1,20 @@
 //
-//  Patient.m
+//  Person.m
 //  Patient&Doctor
 //
 //  Created by Nicholas Fung on 2017-10-05.
 //  Copyright © 2017 Nicholas Fung. All rights reserved.
 //
 
-#import "Patient.h"
+#import "Person.h"
 
-@implementation Patient
+@implementation Person
 
--(instancetype)initWithName:(NSString *)name andAge:(int)age{
-    self = [super initWithName:name];
+-(instancetype)initWithName:(NSString *)name{
+    self = [super init];
+    
     if (self) {
-        _age = age;
+        _name = name;
     }
     return self;
 }

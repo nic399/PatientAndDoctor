@@ -10,6 +10,7 @@
 		01DDD0EB1F868FD800FC12C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0EA1F868FD800FC12C9 /* main.m */; };
 		01DDD0F31F86AD0D00FC12C9 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0F21F86AD0D00FC12C9 /* Doctor.m */; };
 		01DDD0F61F86AD2300FC12C9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0F51F86AD2300FC12C9 /* Patient.m */; };
+		01DDD0FC1F86C30F00FC12C9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0FB1F86C30F00FC12C9 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		01DDD0F21F86AD0D00FC12C9 /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		01DDD0F41F86AD2300FC12C9 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
 		01DDD0F51F86AD2300FC12C9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		01DDD0FA1F86C30F00FC12C9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		01DDD0FB1F86C30F00FC12C9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				01DDD0F21F86AD0D00FC12C9 /* Doctor.m */,
 				01DDD0F41F86AD2300FC12C9 /* Patient.h */,
 				01DDD0F51F86AD2300FC12C9 /* Patient.m */,
+				01DDD0FA1F86C30F00FC12C9 /* Person.h */,
+				01DDD0FB1F86C30F00FC12C9 /* Person.m */,
 			);
 			path = "Patient&Doctor";
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			files = (
 				01DDD0F61F86AD2300FC12C9 /* Patient.m in Sources */,
 				01DDD0F31F86AD0D00FC12C9 /* Doctor.m in Sources */,
+				01DDD0FC1F86C30F00FC12C9 /* Person.m in Sources */,
 				01DDD0EB1F868FD800FC12C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +269,7 @@
 				01DDD0F01F868FD800FC12C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

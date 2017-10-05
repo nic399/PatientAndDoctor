@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
-@interface Doctor : NSObject
+@interface Doctor : Person
+
+@property (nonatomic, strong, readonly) NSString *specialization;
+
+-(instancetype)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 
 @end
