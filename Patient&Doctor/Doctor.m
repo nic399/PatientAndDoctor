@@ -32,6 +32,7 @@ static NSMutableSet *perscriptions;
 -(BOOL)acceptPatient:(Patient *)patient {
     if (patient.healthcard != nil) {
         [self.currentPatients setObject:patient forKey:[patient healthcard]];
+        NSLog(@"Accepted new patient; this doctor now has %lu patient(s)", (unsigned long)[self.currentPatients count]);
         return true;
     }
     return false;
@@ -39,8 +40,13 @@ static NSMutableSet *perscriptions;
 
 -(BOOL)dispenseMedication:(Patient *)patient{
     if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
+        NSLog(@"perscription dispensed");
+        Perscription *newPerscription = [[Perscription alloc] initWithDate:[NSDate date] forPatient:patient.healthcard withPerscription:@"New perscription"];
+        [perscriptions addObject:newPerscription];
+        NSLog(@"Total perscriptions issued: %lu",(unsigned long)[perscriptions count]);
         return true;
     }
+    NSLog(@"perscription denied");
     return false;
 }
 

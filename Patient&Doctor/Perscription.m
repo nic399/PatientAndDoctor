@@ -10,4 +10,16 @@
 
 @implementation Perscription
 
+-(instancetype)initWithDate:(NSDate *)issueDate
+                 forPatient:(NSString *)patientHealthcard
+           withPerscription:(NSString *)perscription{
+    self = [super init];
+    if (self) {
+        _issueDate = issueDate;
+        _patientHealthcard = patientHealthcard;
+        _perscription = perscription;
+    }
+    return self;
+}
+
 @end

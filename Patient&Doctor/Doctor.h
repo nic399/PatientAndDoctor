@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
+#import "Perscription.h"
 
 @class Patient;
 
@@ -15,8 +16,6 @@
 
 @property (nonatomic, strong, readonly) NSString *specialization;
 @property (nonatomic, strong, readwrite) NSMutableDictionary *currentPatients;
-
-//+(void)initialize;
 
 -(instancetype)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 

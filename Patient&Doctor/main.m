@@ -22,11 +22,17 @@ int main(int argc, const char * argv[]) {
         BOOL testBool = [p1 requestMedication:d1];
         NSLog(@"Did get drugs: %i", testBool);
         p1.healthcard = @"123";
+        p2.healthcard = @"456";
         testBool = [p1 requestMedication:d1];
         NSLog(@"Did get drugs: %i", testBool);
         [p1 visitDoctor:d1];
         testBool = [p1 requestMedication:d1];
         NSLog(@"Did get drugs: %i", testBool);
+        [p1 requestMedication:d1];
+        [p2 requestMedication:d1];
+        [p1 requestMedication:d2];
+        [p2 visitDoctor:d2];
+        [p2 requestMedication:d2];
         
         
         

@@ -10,4 +10,12 @@
 
 @interface Perscription : NSObject
 
+@property (nonatomic, strong, readonly) NSString *patientHealthcard;
+@property (nonatomic, strong, readonly) NSString *perscription;
+@property (nonatomic, strong, readonly) NSDate *issueDate;
+
+-(instancetype)initWithDate:(NSDate *)issueDate
+                 forPatient:(NSString *)patientHealthcard
+           withPerscription:(NSString *)perscription;
+
 @end
