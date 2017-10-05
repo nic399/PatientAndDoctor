@@ -28,7 +28,7 @@
 
 -(BOOL)requestMedication:(Doctor *)doctor{
     
-    return false;
+    return [doctor dispenseMedication:self];
 }
 
 @end

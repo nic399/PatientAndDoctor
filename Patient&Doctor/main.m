@@ -7,11 +7,40 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "general_defines.h"
+#import "Patient.h"
+#import "Doctor.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+
+        Patient *p1 = [[Patient alloc] initWithName:@"Bob" andAge:30];
+        Patient *p2 = [[Patient alloc] initWithName:@"Jane" andAge:27];
+        Doctor *d1 = [[Doctor alloc] initWithName:@"Doc Jones" andSpecialization:@"GP"];
+        Doctor *d2 = [[Doctor alloc] initWithName:@"Doc Haliday" andSpecialization:@"Surgeon"];
+        
+        BOOL testBool = [p1 requestMedication:d1];
+        NSLog(@"Did get drugs: %i", testBool);
+        p1.healthcard = @"123";
+        testBool = [p1 requestMedication:d1];
+        NSLog(@"Did get drugs: %i", testBool);
+        [p1 visitDoctor:d1];
+        testBool = [p1 requestMedication:d1];
+        NSLog(@"Did get drugs: %i", testBool);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     return 0;
 }

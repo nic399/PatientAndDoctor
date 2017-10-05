@@ -9,7 +9,7 @@
 #import "Doctor.h"
 #import "Patient.h"
 
-static NSMutableDictionary *perscriptions;
+static NSMutableSet *perscriptions;
 
 @implementation Doctor
 
@@ -31,9 +31,9 @@ static NSMutableDictionary *perscriptions;
 }
 
 -(BOOL)dispenseMedication:(Patient *)patient{
-//    if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
-//        <#statements#>
-//    }
+    if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
+        return true;
+    }
     return false;
 }
 

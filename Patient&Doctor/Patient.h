@@ -14,7 +14,7 @@
 @interface Patient : Person
 
 @property (nonatomic, assign, readonly) int age;
-@property (nonatomic, strong, readonly) NSString *healthcard;
+@property (nonatomic, strong, readwrite) NSString *healthcard;
 
 -(instancetype)initWithName:(NSString *)name andAge:(int)age;
 -(void)visitDoctor:(Doctor *)doctor;
