@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "general_defines.h"
 
 @interface Person : NSObject
 

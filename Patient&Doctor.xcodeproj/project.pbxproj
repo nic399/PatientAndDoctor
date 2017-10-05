@@ -11,6 +11,7 @@
 		01DDD0F31F86AD0D00FC12C9 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0F21F86AD0D00FC12C9 /* Doctor.m */; };
 		01DDD0F61F86AD2300FC12C9 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0F51F86AD2300FC12C9 /* Patient.m */; };
 		01DDD0FC1F86C30F00FC12C9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD0FB1F86C30F00FC12C9 /* Person.m */; };
+		01DDD1011F86DBF000FC12C9 /* Perscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DDD1001F86DBF000FC12C9 /* Perscription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,9 @@
 		01DDD0F51F86AD2300FC12C9 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
 		01DDD0FA1F86C30F00FC12C9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		01DDD0FB1F86C30F00FC12C9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		01DDD0FE1F86C82F00FC12C9 /* general_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = general_defines.h; sourceTree = "<group>"; };
+		01DDD0FF1F86DBF000FC12C9 /* Perscription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perscription.h; sourceTree = "<group>"; };
+		01DDD1001F86DBF000FC12C9 /* Perscription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perscription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				01DDD0EA1F868FD800FC12C9 /* main.m */,
+				01DDD0FE1F86C82F00FC12C9 /* general_defines.h */,
+				01DDD0FF1F86DBF000FC12C9 /* Perscription.h */,
+				01DDD1001F86DBF000FC12C9 /* Perscription.m */,
 				01DDD0F11F86AD0D00FC12C9 /* Doctor.h */,
 				01DDD0F21F86AD0D00FC12C9 /* Doctor.m */,
 				01DDD0F41F86AD2300FC12C9 /* Patient.h */,
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DDD0F61F86AD2300FC12C9 /* Patient.m in Sources */,
+				01DDD1011F86DBF000FC12C9 /* Perscription.m in Sources */,
 				01DDD0F31F86AD0D00FC12C9 /* Doctor.m in Sources */,
 				01DDD0FC1F86C30F00FC12C9 /* Person.m in Sources */,
 				01DDD0EB1F868FD800FC12C9 /* main.m in Sources */,

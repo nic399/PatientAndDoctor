@@ -7,6 +7,9 @@
 //
 
 #import "Doctor.h"
+#import "Patient.h"
+
+static NSMutableDictionary *perscriptions;
 
 @implementation Doctor
 
@@ -14,8 +17,24 @@
     self = [super initWithName:name];
     if (self) {
         _specialization = specialization;
+        _currentPatients = [[NSMutableDictionary alloc] init];
     }
     return self;
+}
+
+-(BOOL)acceptPatient:(Patient *)patient {
+    if (patient.healthcard != nil) {
+        [self.currentPatients setObject:patient forKey:[patient healthcard]];
+        return true;
+    }
+    return false;
+}
+
+-(BOOL)dispenseMedication:(Patient *)patient{
+//    if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
+//        <#statements#>
+//    }
+    return false;
 }
 
 @end

@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
+@class Patient;
+
 @interface Doctor : Person
 
 @property (nonatomic, strong, readonly) NSString *specialization;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *currentPatients;
 
 -(instancetype)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
+
+-(BOOL)acceptPatient:(Patient *)patient;
+-(BOOL)dispenseMedication:(Patient *)patient;
 
 @end

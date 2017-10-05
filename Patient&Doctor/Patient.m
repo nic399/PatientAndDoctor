@@ -7,6 +7,7 @@
 //
 
 #import "Patient.h"
+#import "Doctor.h"
 
 @implementation Patient
 
@@ -14,8 +15,20 @@
     self = [super initWithName:name];
     if (self) {
         _age = age;
+        _healthcard = nil;
     }
     return self;
+}
+
+-(void)visitDoctor:(Doctor *)doctor{
+    if ([doctor acceptPatient:self]) {
+        
+    }
+}
+
+-(BOOL)requestMedication:(Doctor *)doctor{
+    
+    return false;
 }
 
 @end
