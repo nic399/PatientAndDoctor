@@ -39,7 +39,7 @@ static NSMutableSet *prescriptions;
     return false;
 }
 
--(BOOL)dispenseMedication:(Patient *)patient{
+-(BOOL)dispenseMedication:(Patient *)patient forSymptom:(NSArray<Symptom *> *)symptoms{
     if ([self.currentPatients objectForKey:patient.healthcard] != nil) {
         
         NSLog(@"perscription dispensed");

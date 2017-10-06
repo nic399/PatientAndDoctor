@@ -19,20 +19,20 @@ int main(int argc, const char * argv[]) {
         Doctor *d1 = [[Doctor alloc] initWithName:@"Doc Jones" andSpecialization:@"GP"];
         Doctor *d2 = [[Doctor alloc] initWithName:@"Doc Haliday" andSpecialization:@"Surgeon"];
         
-        BOOL testBool = [p1 requestMedication:d1];
+        BOOL testBool = [p1 requestMedication:d1 forSymptom:nil];
         NSLog(@"Did get drugs: %i", testBool);
         p1.healthcard = @"123";
         p2.healthcard = @"456";
-        testBool = [p1 requestMedication:d1];
+        testBool = [p1 requestMedication:d1 forSymptom:nil];
         NSLog(@"Did get drugs: %i", testBool);
         [p1 visitDoctor:d1];
-        testBool = [p1 requestMedication:d1];
+        testBool = [p1 requestMedication:d1 forSymptom:nil];
         NSLog(@"Did get drugs: %i", testBool);
-        [p1 requestMedication:d1];
-        [p2 requestMedication:d1];
-        [p1 requestMedication:d2];
+        [p1 requestMedication:d1 forSymptom:nil];
+        [p2 requestMedication:d1 forSymptom:nil];
+        [p1 requestMedication:d2 forSymptom:nil];
         [p2 visitDoctor:d2];
-        [p2 requestMedication:d2];
+        [p2 requestMedication:d2 forSymptom:nil];
         
         
         

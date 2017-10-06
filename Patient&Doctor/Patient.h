@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 #import "Prescription.h"
+#import "Symptom.h"
 
 @class Doctor;
 
@@ -20,7 +21,7 @@
 
 -(instancetype)initWithName:(NSString *)name andAge:(int)age;
 -(void)visitDoctor:(Doctor *)doctor;
--(BOOL)requestMedication:(Doctor *)doctor;
+-(BOOL)requestMedication:(Doctor *)doctor forSymptom:(NSArray<Symptom *> *) symptoms;
 -(void)receivePrescription:(Prescription *)prescription;
 
 @end

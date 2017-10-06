@@ -26,9 +26,9 @@
     }
 }
 
--(BOOL)requestMedication:(Doctor *)doctor{
+-(BOOL)requestMedication:(Doctor *)doctor forSymptom:(NSArray<Symptom *> *)symptoms{
     
-    return [doctor dispenseMedication:self];
+    return [doctor dispenseMedication:self forSymptom:symptoms];
 }
 
 -(void)receivePrescription:(Prescription *)prescription{
